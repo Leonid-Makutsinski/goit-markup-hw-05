@@ -117,7 +117,7 @@ a {
 }
 
 .menu-item:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 50px;
 }
 
 .site-nav .link {
@@ -354,7 +354,7 @@ a {
     color: var(--white-color);
 }
 
-/* our-team */
+/* Наша команда */
 .team-section {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -424,6 +424,8 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-item:not(:last-child) {
@@ -434,6 +436,8 @@ a {
     width: 20px;
     height: 20px;
     fill: #AFB1B8;
+
+    transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link:hover,
@@ -474,10 +478,14 @@ a {
     height: 90px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
+
+    transition: border 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-icon {
     fill: currentColor;
+
+    transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
@@ -563,7 +571,7 @@ a {
     display: none;
 }
 
-/* buttons */
+/* Портфолио_кнопки */
 .filter-button {
     display: flex;
     justify-content: center;
@@ -583,6 +591,7 @@ a {
     color: var(--primary-text-color);
     background-color: var(--secondary-2-bg-color);
     padding: 6px 22px;
+    border-radius: 4px;
     border: none;
     min-width: 73px;
     font-family: inherit;
@@ -592,11 +601,15 @@ a {
     line-height: 1.62;
     letter-spacing: 0.03em;
     cursor: pointer;
+
+    transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .secondary-button:hover,
 .secondary-button:focus {
     color: var(--white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /* portfolio-gallery */
 .portfolio-list {
@@ -606,6 +619,8 @@ a {
 .portfolio-list .item {
     width: calc((100% - 30px * 2) / 3);
     border: 1px solid #EEEEEE;
+
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .desc-portfolio {
@@ -623,6 +638,36 @@ a {
 .portfolio-list .item:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
      0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.work-thumb {
+    position: relative;
+    overflow: hidden;
+}
+
+.work-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-item:hover .work-overlay {
+    transform: translateY(0);
+}
+
+.work-overlay-text {
+    font-size: 18px;
+    line-height: 1.56;
+    color: var(--white-color);
+    margin: 0;
 }
 
 .desc-portfolio {
